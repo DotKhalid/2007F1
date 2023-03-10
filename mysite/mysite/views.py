@@ -6,8 +6,13 @@ from django.shortcuts import render
 
 def Home(request):
     data = {
-    "title":"Home"
-            }
+    "title":"Home",
+    'products':['mobile','laptop','shirt'],
+    'productDetail':[
+        {'product_name':'mobile', "price":45000},
+        {'product_name':'laptop', "price":450000}
+    ]
+    }
     return render(request, "index.html",data)
 
 
