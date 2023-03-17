@@ -20,8 +20,12 @@ from mysite import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.Home),
+    path('special_offer/',views.Special_Offer),
+    path('delivery/',views.Delivery),
+    path('contact/',views.Contact),
+    path('message/',views.Message),
+
     path('about-us/', views.aboutus),
-    path('contact/', views.contact),
     path('product/', views.product),
     path('product/<str:p_name>', views.productdetail)
 ]

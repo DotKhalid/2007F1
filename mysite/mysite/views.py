@@ -5,15 +5,20 @@ from django.shortcuts import render
 
 
 def Home(request):
-    data = {
-    "title":"Home",
-    'products':['mobile','laptop','shirt'],
-    'productDetail':[
-        {'product_name':'mobile', "price":45000},
-        {'product_name':'laptop', "price":450000}
-    ]
-    }
-    return render(request, "index.html",data)
+    return render(request, "index.html")
+
+def Special_Offer(request):
+    return render(request, "special_offer.html")
+
+def Delivery(request):
+    return render(request, "normal.html")
+
+def Contact(request):
+    return render(request, "contact.html")
+
+
+def Message(request):
+    return render(request, "message.html",{})
 
 
 def aboutus(request):
